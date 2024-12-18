@@ -1,0 +1,315 @@
+:root {
+  --primary-color: #c72727;
+  --secondary-color: #f99500;
+  --light-color: #f3f3f3;
+  --dark-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: calc(100vw - 100px);
+  margin: 0 auto;
+}
+
+body {
+  background-color: gray;
+}
+
+a,
+button,
+input {
+  text-decoration: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  background-color: var(--dark-color);
+}
+
+nav {
+  width: 100%;
+  height: 100%;
+}
+
+nav ul {
+  height: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+}
+nav ul li {
+  list-style: none;
+}
+nav ul li a {
+  color: var(--light-color);
+  text-transform: uppercase;
+}
+
+nav ul li a:hover {
+  color: var(--primary-color);
+}
+
+.banner {
+  width: 100%;
+  height: 500px;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.chart {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.chart ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 20px;
+
+  & li:nth-child(even) {
+    animation-delay: 0.5s;
+  }
+  & li:nth-child(odd) {
+    animation-delay: 1s;
+  }
+}
+.chart ul li {
+  list-style: none;
+}
+.chart-item {
+  width: 20px;
+  background-color: var(--dark-color);
+  animation: chart 5s linear infinite;
+}
+
+@keyframes chart {
+  0% {
+    height: 10%;
+  }
+  50% {
+    height: 100%;
+  }
+  100% {
+    height: 10%;
+  }
+}
+
+.products {
+  width: 100%;
+  height: 300px;
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  &::-webkit-scrollbar {
+    height: 10px;
+  }
+
+  &::-webkit-scrollbar-track {
+    width: 5px;
+    height: 8px;
+    background-color: var(--light-color);
+    border-radius: 100px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 100px;
+    background-color: var(--dark-color);
+  }
+}
+
+.product {
+  min-width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.product img {
+  max-width: 100%;
+  height: 200px;
+  object-fit: cover;
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+  }
+}
+
+.btn {
+  position: relative;
+  padding: 10px 20px;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &::after {
+    content: "Love You";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    z-index: -1;
+    transition: all 0.5s ease-in-out;
+  }
+
+  &:hover::after {
+    top: 30px;
+  }
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--light-color);
+  border-top: 4px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-dots {
+  position: relative;
+  width: 50px;
+  height: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loading-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #333;
+  animation: blink 1s linear infinite;
+}
+
+.loading-dots .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.loading-dots .dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots .dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.loading-bar {
+  position: relative;
+  width: 100px;
+  height: 10px;
+  background-color: #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.loading-bar .progress {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #333;
+  animation: progress 2s linear infinite;
+}
+
+@keyframes progress {
+  0% {
+    width: 0;
+  }
+  10% {
+    width: 20%;
+  }
+  50% {
+    width: 30%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.loading-ring {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 5px solid #ccc;
+  border-top-color: #333;
+  animation: spin 1s linear infinite;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.loading-ring::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
