@@ -3,9 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lazada</title>
+    <link rel="icon" href="assets/images/logo/logolazada.png" type="image/png">
+    <title>Lazada - Mua Sắm Hàng Chất Giá Tốt Online</title>
     <link rel="stylesheet" href="assets/css/grid.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/query.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
@@ -15,7 +17,72 @@
     />
   </head>
   <body>
-    <header id="header">
+
+    <!-- Smartphone banner -->
+    <div id="banner-smart" class="banner-smart">
+    </div>
+
+    <!-- Header smartphone -->
+     <div id="header-smart" class="header-smart">
+          <div class="grid wide">
+             <div class="smart-search">
+              <span class="smart-search-icon">
+              </span>
+              <div class="smart-search-input">
+                <input type="text" placeholder="Tìm kiếm sản phẩm">
+              </div>
+              <button class="smart-search-btn">
+                 Search
+              </button>
+             </div>
+          </div>
+     </div>
+
+    <!-- Menu smart phone -->
+
+    <nav id="menu-smart" class="menu-smart">
+      <div class="grid wide">
+        <div class="row">
+            <div class="col m-3 c-3">
+              <div class="menu-smart-item">
+                <div class="menu-smart-icon">
+                  <img src="assets/images/menu-smart/menusm1.png" alt="">
+                </div>
+                <div class="menu-smart-text">Home</div>
+              </div>
+            </div>
+            <div class="col m-3 c-3">
+              <div class="menu-smart-item">
+                <div class="menu-smart-icon">
+                  <img src="assets/images/menu-smart/menusm2.png" alt="">
+                </div>
+                <div class="menu-smart-text">Categories</div>
+              </div>
+            </div>
+            <div class="col m-3 c-3">
+              <div class="menu-smart-item">
+                <div class="menu-smart-icon">
+                  <img src="assets/images/menu-smart/menusm3.png" alt="">
+                </div>
+                <div class="menu-smart-text">Cart</div>
+              </div>
+            </div>
+            <div class="col m-3 c-3">
+              <div class="menu-smart-item">
+                <div class="menu-smart-icon">
+                  <img src="assets/images/menu-smart/menusm4.png" alt="">
+                </div>
+                <div class="menu-smart-text">Account</div>
+              </div>
+            </div>
+           
+        </div>
+      </div>
+    </nav>
+
+     
+    <!-- Header PC -->
+    <header id="header-pc">
       <div class="header-top">
         <div class="grid wide">
           <ul>
@@ -61,62 +128,212 @@
       </div>
     </header>
 
-    <div class="grid wide">
-      <div class="banner">
-        <div class="slide">
-          <img src="assets/images/banner/banner1.avif" alt="" />
+    <main>
+
+      <div class="grid wide">
+        <div class="row">
+          <div class="col l-10 slide">
+            <img src="assets/images/banner/banner1.avif" alt="" />
+          </div>
+  
+          <div class="col l-2 c-0 m-0">
+            <div class="download-module">
+              <div class="module-title">
+                <div class="img-logo">
+                  <img src="assets/images/dowload/laz.avif" alt="" />
+                </div>
+                <span>TRY LAZADA APP</span>
+              </div>
+    
+              <div class="module-content">
+                <div class="score">
+                  <span class="star"><i class="fa-solid fa-star"></i></span>
+                  <span class="rate" >4.7 Rated</span>
+                </div>
+                <div class="enjoy-tip">
+                  <span class="enjoy-text">Get the Lazada App to enjoy</span>
+                </div>
+    
+                <div class="free-voucher">
+                  <div class="icon-item">
+                    <img src="assets/images/dowload/freeship.avif" alt="" />
+                    <span>FREE SHIPPING</span>
+                  </div>
+                  <div class="icon-item">
+                    <img src="assets/images/dowload/voucher.avif" alt="" />
+                    <span>EXCLUSIVE VOUCHERS</span>
+                  </div>
+                </div>
+              </div>
+    
+              <div class="module-qr">
+                <div class="qr-content">
+                  <div class="qr-img">
+                    <img
+                    src="assets/images/dowload/qrdowload.avif"
+                    class="img-qr"
+                    alt=""
+                  />
+                  </div>
+                  <div class="btn-dowload">
+                    <a href="#" class="btn-app-store"></a>
+                    <a href="#" class="btn-google-play"></a>
+                  </div>
+                </div>
+                <span>Download the App now by scanning the QR code</span>
+              </div>
+            </div>
+            
+          </div>
         </div>
+    </div>
 
-        <div class="download-module">
-          <div class="module-title">
-            <div class="img-logo">
-              <img src="assets/images/dowload/laz.avif" alt="" />
+    <!-- Channel smart phone -->
+
+    <div id="channel-smart" class="grid wide">
+      <div class="card-channel">
+        <div class="channel-content">
+          <div class="channel-row">
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm1.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Earn Coins
+              </span>
             </div>
-            <span>TRY LAZADA APP</span>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm2.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Pree Prize
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm3.avif" alt="">
+              </div>
+              <span class="channel-name">
+                LazMart
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm4.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Lucky Egg
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm5.avif" alt="">
+              </div>
+              <span class="channel-name">
+               Travel
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm6.avif" alt="">
+              </div>
+              <span class="channel-name">
+                LazCard
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm7.avif" alt="">
+              </div>
+              <span class="channel-name">
+                LazLOOK
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm8.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Best Sellers
+              </span>
+            </div>
           </div>
-
-          <div class="module-content">
-            <div class="score">
-              <span><i class="fa-solid fa-star"></i></span>
-              <span>4.7 Rated</span>
-            </div>
-            <div class="enjoy-tip">
-              <span>Get the Lazada App to enjoy</span>
-            </div>
-
-            <div class="free-voucher">
-              <div class="icon-item">
-                <img src="assets/images/dowload/freeship.avif" alt="" />
-                <span>FREE SHIPPING</span>
+          <div class="channel-row">
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm9.avif" alt="">
               </div>
-              <div class="icon-item">
-                <img src="assets/images/dowload/voucher.avif" alt="" />
-                <span>EXCLUSIVE VOUCHERS</span>
-              </div>
+              <span class="channel-name">
+                LazMall
+              </span>
             </div>
-          </div>
-
-          <div class="module-qr">
-            <div class="qr-content">
-              <img
-                src="assets/images/dowload/qrdowload.avif"
-                class="img-qr"
-                alt=""
-              />
-              <div class="btn-dowload">
-                <a href="#" class="btn-app-store"></a>
-                <a href="#" class="btn-google-play"></a>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm10.avif" alt="">
               </div>
+              <span class="channel-name">
+                Payment Voucher
+              </span>
             </div>
-            <span>Download the App now by scanning the QR code</span>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm11.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Bundle & Save
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm12.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Top Up
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm13.avif" alt="">
+              </div>
+              <span class="channel-name">
+                LazGlobal
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm14.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Mom Club Mother Baby
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm15.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Categories
+              </span>
+            </div>
+            <div class="channel-item">
+              <div class="channel-icon">
+                <img src="assets/images/channel/channel-smart/cnsm16.avif" alt="">
+              </div>
+              <span class="channel-name">
+                Review Incentive
+              </span>
+            </div>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="grid wide">
-      <div class="row" style="padding-top: 12px">
-        <div class="col l-4">
+     
+    <!-- Channel PC -->
+    <div id="channel-pc" class="grid wide" style="padding-top: 12px">
+      <div class="row sm-gutter">
+        <div class="col l-4 m-0 c-0">
           <div class="channel">
             <div class="channel-info">
               <img src="assets/images/channel/lazmail.avif" alt="" />
@@ -130,7 +347,7 @@
           </div>
         </div>
 
-        <div class="col l-4">
+        <div class="col l-4 m-0 c-0">
           <div class="channel">
             <div class="channel-info">
               <img src="assets/images/channel/voucher.avif" alt="" />
@@ -144,7 +361,7 @@
           </div>
         </div>
 
-        <div class="col l-4">
+        <div class="col l-4 m-0 c-0">
           <div class="channel">
             <div class="channel-info">
               <img src="assets/images/channel/topup.avif" alt="" />
@@ -160,7 +377,89 @@
       </div>
     </div>
 
-    <div class="grid wide" style="padding-top: 24px">
+    <!-- Flash Sale smart phone -->
+
+    <div id="flash-sale-smart" class="grid wide">
+      <div class="card-fs-smart">
+        <div class="card-header">
+          <div class="card-title">
+            <img src="https://img.lazcdn.com/g/gcp/lazada/d85e1dc2-34ca-4292-ae33-320589ddf8b8_VN-360-63.png_x36q80.jpg_.avif" alt="">
+          </div>
+          <div class="card-more">
+            <span class="card-more-text">Shop more</span>
+            <span class="card-more-icon">
+              <i class="fa-solid fa-angle-right"></i>
+            </span>
+          </div>
+        </div>
+
+        <div class="card-content">
+          <div class="card-fs-item">
+            <div class="fs-arrow">
+              <p class="fs-arrow-text">SAVE</p>
+              <p class="fs-arrow-num">55%</p>
+            </div>
+            <div class="card-fs-img">
+              <img src="https://img.lazcdn.com/g/p/bf0f62f19257f6d27d5302942f0256ed.jpg_240x240q80.jpg_.avif" alt="">
+            </div>
+            <div class="card-fs-price">
+              <span class="price">đ107,000</span>
+            </div>
+            <span class="fs-origin-price">đ107,000</span>
+           
+            <div class="fs-progress">
+              <div class="fs-progress-val">
+                Selling Fast
+              </div>
+            </div>
+          </div>
+          <div class="card-fs-item">
+            <div class="fs-arrow">
+              <p class="fs-arrow-text">SAVE</p>
+              <p class="fs-arrow-num">55%</p>
+            </div>
+            <div class="card-fs-img">
+              <img src="https://img.lazcdn.com/g/p/354bcc14f860b76592af052dbf27be13.jpg_240x240q80.jpg_.avif" alt="">
+            </div>
+            <div class="card-fs-price">
+              <span class="price">đ107,000</span>
+            </div>
+            <span class="fs-origin-price">đ107,000</span>
+           
+            <div class="fs-progress">
+              <div class="fs-progress-val">
+                Selling Fast
+              </div>
+            </div>
+          </div>
+          <div class="card-fs-item">
+            <div class="fs-arrow">
+              <p class="fs-arrow-text">SAVE</p>
+              <p class="fs-arrow-num">55%</p>
+            </div>
+            <div class="card-fs-img">
+              <img src="https://img.lazcdn.com/g/p/1469ed3d3e1f28729ae1b2d07f0c5fac.jpg_240x240q80.jpg_.avif" alt="">
+            </div>
+            <div class="card-fs-price">
+              <span class="price">đ107,000</span>
+            </div>
+            <span class="fs-origin-price">đ107,000</span>
+           
+            <div class="fs-progress">
+              <div class="fs-progress-val">
+                Selling Fast
+              </div>
+            </div>
+          </div>
+
+
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Flash Sale PC -->
+    <div id="flash-sale-pc" class="grid wide" style="padding-top: 24px">
       <div class="header-card">
         <p class="header-card-title">FLASH SALE</p>
       </div>
@@ -287,7 +586,7 @@
       </div>
     </div>
 
-    <div class="grid wide" style="padding-top: 24px">
+    <div id="laz-mall" class="grid wide" style="padding-top: 24px">
       <div class="header-card">
         <p class="header-card-title">Laz Mall</p>
       </div>
@@ -385,7 +684,7 @@
       </div>
     </div>
 
-    <div class="grid wide" style="padding-top: 24px ">
+    <div id="categories" class="grid wide" style="padding-top: 24px ">
       <div class="header-card">
         <p class="header-card-title">Categories</p>
       </div>
@@ -495,446 +794,496 @@
       <div class="header-card">
         <p class="header-card-title">Just For You</p>
       </div>
-      <div class="products-fy">
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy1.avif" alt="">
+      <div class="row">
+        <div class="col l-2 m-4 c-6 pb-10"  >
+          <div class="products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy1.avif" alt="">
+            </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
           </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
-
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
-            </div>
-            
-           </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy10.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy10.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy9.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy9.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy12.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy12.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy11.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy11.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy10.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy10.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy9.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy9.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy8.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy8.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy7.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy7.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy6.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy6.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchannelbundle.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy5.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-              Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy5.avif" alt="">
             </div>
-            
-           </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+                Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
+          </div>
         </div>
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy4.avif" alt="">
+        <div class="col l-2 m-4 c-6 pb-10"  >
+
+          <div class=" products-fy-item">
+            <div class="pfy-image">
+              <img src="assets/images/productforyou/pfy4.avif" alt="">
+            </div>
+            <div class="pfy-info">
+              <div class="pfy-info-name">
+               <div class="icon-channel">
+                 <img src="assets/images/productforyou/iconchanneltopitem.avif" alt="">
+               </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+              </div>
+              <div class="pfy-info-price">
+                <span class="item-price">đ193,860</span> 
+                <span class="item-discount">-9%</span>
+              </div>
+  
+              <div class="pfy-info-rating">
+                <div class="stars">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+                <div class="purchases">
+                  (2450)
+                </div>
+              </div>
+              
+             </div>
           </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchanneltopitem.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
-
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
-            </div>
-            
-           </div>
         </div>
+        <div class="col l-2 m-4 c-6 pb-10"  >
 
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy3.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannellazmall.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
+           <div class=" products-fy-item">
+    <div class="pfy-image">
+      <img src="assets/images/productforyou/pfy3.avif" alt="">
+    </div>
+    <div class="pfy-info">
+      <div class="pfy-info-name">
+       <div class="icon-channel">
+         <img src="assets/images/productforyou/iconchannellazmall.avif" alt="">
+       </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+      </div>
+      <div class="pfy-info-price">
+        <span class="item-price">đ193,860</span> 
+        <span class="item-discount">-9%</span>
+      </div>
 
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
-            </div>
-            
-           </div>
+      <div class="pfy-info-rating">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
         </div>
-
-        <div class="products-fy-item">
-          <div class="pfy-image">
-            <img src="assets/images/productforyou/pfy2.avif" alt="">
-          </div>
-          <div class="pfy-info">
-            <div class="pfy-info-name">
-             <div class="icon-channel">
-               <img src="assets/images/productforyou/iconchannellazmall.avif" alt="">
-             </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
-            </div>
-            <div class="pfy-info-price">
-              <span class="item-price">đ193,860</span> 
-              <span class="item-discount">-9%</span>
-            </div>
-
-            <div class="pfy-info-rating">
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <div class="purchases">
-                (2450)
-              </div>
-            </div>
-            
-           </div>
+        <div class="purchases">
+          (2450)
         </div>
+      </div>
+      
+     </div>
+           </div>
+         </div>
+         <div class="col l-2 m-4 c-6 pb-10"  >
+
+       <div class=" products-fy-item">
+    <div class="pfy-image">
+      <img src="assets/images/productforyou/pfy2.avif" alt="">
+    </div>
+    <div class="pfy-info">
+      <div class="pfy-info-name">
+       <div class="icon-channel">
+         <img src="assets/images/productforyou/iconchannellazmall.avif" alt="">
+       </div> Probi yogurt drink low sugar bottle 130ml -24 bottles/carton yogurt
+      </div>
+      <div class="pfy-info-price">
+        <span class="item-price">đ193,860</span> 
+        <span class="item-discount">-9%</span>
+      </div>
+
+      <div class="pfy-info-rating">
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="purchases">
+          (2450)
+        </div>
+      </div>
+      
+     </div>
+         </div>
+       
+
+         </div>
 
       </div>
-      <div class="pfy-load-more-btn">
+      <div id="loadmore-btn" class="pfy-load-more-btn">
            <button>LOAD MORE</button>
+      </div>
+
+      <div id="loading" class="spinner-container">
+        <div class="coming-img">
+          <img
+            src="https://img.lazcdn.com/g/tps/imgextra/i4/O1CN01Y3c8hr1nzmm59KVPu_!!6000000005161-1-tps-100-100.gif_80x80q80.jpg_.webp"
+            alt=""
+          />
+        </div>
       </div>
     </div>
 
-    <div class="grid wide"> 
+    <div id="banner-bottom" class="grid wide"> 
        
         <div class="banner-bottom">
           <div class="banner-bottom-item ">
@@ -950,7 +1299,9 @@
         </div>
        
 
-        <footer class="footer ">
+    </main>
+
+        <footer id="footer" class="footer ">
            <div class="footer-first grid wide">
               <div class="footer-first-left">
                  <div class="footer-first-left-item">

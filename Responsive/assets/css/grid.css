@@ -1,8 +1,13 @@
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
+
+.pb-10 {
+  padding-bottom: 10px;
+}
+
 .grid {
   width: 100%;
   display: block;
@@ -17,8 +22,8 @@
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -4px;
-  margin-right: -4px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 
 .row.no-gutters {
@@ -27,8 +32,8 @@
 }
 
 .col {
-  padding-left: 4px;
-  padding-right: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .row.no-gutters .col {
@@ -147,13 +152,13 @@
 /* >= Tablet */
 @media (min-width: 740px) {
   .row {
-    margin-left: -8px;
-    margin-right: -8px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
   .col {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .m-0 {
@@ -283,8 +288,8 @@
 /* PC medium resolution > */
 @media (min-width: 1113px) {
   .row {
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
   .row.sm-gutter {
@@ -293,8 +298,8 @@
   }
 
   .col {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .row.sm-gutter .col {
@@ -432,10 +437,15 @@
   }
 }
 
-/* Tablet - PC low resolution */
 @media (min-width: 740px) and (max-width: 1023px) {
   .wide {
-    width: 644px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .wide {
+    width: 90%; /* Hoặc chiều rộng phù hợp cho mobile */
   }
 }
 
@@ -446,8 +456,8 @@
   }
 
   .wide .row {
-    margin-left: -12px;
-    margin-right: -12px;
+    margin-left: -5px;
+    margin-right: -5px;
   }
 
   .wide .row.sm-gutter {
@@ -456,8 +466,8 @@
   }
 
   .wide .col {
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 
   .wide .row.sm-gutter .col {
