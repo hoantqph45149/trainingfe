@@ -87,7 +87,7 @@
 
 1. `length`: Trả về độ dài của chuỗi.
 
-2. `indexOf("name", number)`: Tìm vị trí đầu tiên của chuỗi con "name" trong chuỗi chính, bắt đầu từ vị trí `number`.
+2. `indexOf("name", number)`: Tìm vị trí đầu tiên của chuỗi con "name" trong chuỗi chính, bắt đầu từ vị trí `number`. Neu khong tim thay thi tra ve -1.
 
 3. `lastIndexOf("name")`: Tìm vị trí xuất hiện cuối cùng của "name" trong chuỗi.
 
@@ -494,6 +494,36 @@ element.addEventListener("event", eventHandler);
 element.removeEventListener("event", eventHandler);
 ```
 
+## Event Loop trong JavaScript
+
+Event Loop là một cơ chế quan trọng trong JavaScript giúp xử lý các tác vụ không đồng bộ. Nó cho phép JavaScript thực hiện các tác vụ như xử lý sự kiện, thực hiện các callback, và quản lý các tác vụ không đồng bộ như AJAX, setTimeout, và Promises.
+
+### Cách hoạt động của Event Loop
+
+1. **Call Stack**: Là nơi lưu trữ các hàm cần thực thi. Khi một hàm được gọi, nó sẽ được đẩy vào Call Stack. Khi hàm hoàn thành, nó sẽ được loại bỏ khỏi Call Stack.
+
+2. **Web APIs**: Là các API cung cấp bởi môi trường (như trình duyệt) để thực hiện các tác vụ không đồng bộ như setTimeout, AJAX, và DOM events.
+
+3. **Callback Queue**: Là nơi lưu trữ các callback sẵn sàng để được thực thi. Khi một tác vụ không đồng bộ hoàn thành, callback của nó sẽ được đẩy vào Callback Queue.
+
+4. **Event Loop**: Là cơ chế kiểm tra Call Stack và Callback Queue. Nếu Call Stack trống, Event Loop sẽ lấy callback từ Callback Queue và đẩy vào Call Stack để thực thi.
+
+### Ví dụ minh họa
+
+```javascript
+console.log("Start");
+
+setTimeout(function () {
+  console.log("Timeout");
+}, 0);
+
+Promise.resolve().then(function () {
+  console.log("Promise");
+});
+
+console.log("End");
+```
+
 ## Json trong js
 
 1. JSON là gì?
@@ -514,4 +544,334 @@ console.log(jsonString); // '{"name":"John","age":30,"city":"New York"}'
 
 const jsonObject = JSON.parse(jsonString);
 console.log(jsonObject); // { name: 'John', age: 30, city: 'New York' }
+```
+
+## Promise trong JavaScript
+
+1. Promise là gì?
+
+Promise là một đối tượng đại diện cho một giá trị có thể có trong tương lai, hoặc là một giá trị đã được tính toán hoặc là một lý do tại sao giá trị đó không thể được tính toán. Nó cho phép bạn viết mã không đồng bộ theo cách dễ đọc và dễ quản lý hơn.
+
+2. Các trạng thái của Promise:
+
+- **Pending**: Trạng thái ban đầu, chưa hoàn thành hoặc bị từ chối.
+- **Fulfilled**: Đã hoàn thành thành công.
+- **Rejected**: Đã bị từ chối với một lý do (thường là một lỗi).
+
+3. Cách tạo một Promise:
+
+```javascript
+let promise = new Promise(function(resolve, reject) {
+  // Thực hiện một số công việc không đồng bộ
+  if (/* công việc thành công */) {
+    resolve("Thành công!");
+  } else {
+    reject("Thất bại!");
+  }
+});
+```
+
+4. Cách dụng Promise:
+
+```javascript
+promise
+  .then(function (result) {
+    console.log(result); // "Thành công!"
+  })
+  .catch(function (error) {
+    console.log(error); // "Thất bại!"
+  });
+```
+
+5. Promise chaining
+
+```javascript
+promise
+  .then(function (result) {
+    return result + " thêm dữ liệu";
+  })
+  .then(function (newResult) {
+    console.log(newResult); // "Thành công! thêm dữ liệu"
+  })
+  .catch(function (error) {
+    console.log(error);
+  });
+```
+
+6. Promise.all
+
+```javascript
+let promise1 = Promise.resolve(3);
+let promise2 = 42;
+let promise3 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 100, "foo");
+});
+
+Promise.all([promise1, promise2, promise3]).then(function (values) {
+  console.log(values); // [3, 42, "foo"]
+});
+```
+
+7. Promise.race
+
+```javascript
+let promise1 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 500, "one");
+});
+
+let promise2 = new Promise(function (resolve, reject) {
+  setTimeout(resolve, 100, "two");
+});
+
+Promise.race([promise1, promise2]).then(function (value) {
+  console.log(value); // "two"
+});
+```
+
+## Async/Await trong JavaScript
+
+`async` và `await` là cú pháp mới trong JavaScript (ES8) giúp làm việc với các tác vụ không đồng bộ dễ dàng hơn. Chúng cung cấp một cách viết mã không đồng bộ trông giống như mã đồng bộ, giúp mã dễ đọc và dễ hiểu hơn.
+
+### `async` Function
+
+- Một hàm được khai báo với từ khóa `async` sẽ luôn trả về một `Promise`.
+- Nếu hàm trả về một giá trị, giá trị đó sẽ được tự động bọc trong một `Promise.resolve`.
+- Nếu hàm ném ra một lỗi, lỗi đó sẽ được bọc trong một `Promise.reject`.
+
+### `await` Expression
+
+- `await` chỉ có thể được sử dụng bên trong một hàm `async`.
+- `await` sẽ tạm dừng việc thực thi của hàm `async` cho đến khi `Promise` được giải quyết (fulfilled hoặc rejected).
+- Nó trả về giá trị của `Promise` nếu `Promise` được giải quyết thành công.
+- Nếu `Promise` bị từ chối, `await` sẽ ném ra lỗi tương ứng.
+
+### Ví dụ
+
+```javascript
+// Khai báo một hàm async
+async function fetchData() {
+  try {
+    // Sử dụng await để đợi Promise được giải quyết
+    let response = await fetch("https://api.example.com/data");
+    let data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+// Gọi hàm async
+fetchData();
+```
+
+## var, let, const trong JavaScript
+
+JavaScript cung cấp ba cách để khai báo biến: `var`, `let`, và `const`. Mỗi cách có các đặc điểm và phạm vi khác nhau.
+
+### `var`
+
+- **Phạm vi hàm (Function Scope)**: Biến được khai báo bằng `var` có phạm vi trong hàm chứa nó.
+- **Hoisting**: Biến khai báo bằng `var` được hoisted lên đầu phạm vi của nó, nhưng giá trị của nó không được hoisted.
+- **Có thể khai báo lại**: Biến có thể được khai báo lại trong cùng một phạm vi.
+
+```javascript
+function example() {
+  console.log(x); // undefined (hoisted)
+  var x = 10;
+  console.log(x); // 10
+}
+example();
+```
+
+### `let`
+
+**Phạm vi khối (Block Scope)**: Biến được khai báo bằng `let` có phạm vi trong khối chứa nó (giữa cặp dấu {}).
+**Hoisting**: Biến khai báo bằng `let` cũng được hoisted, nhưng không thể truy cập trước khi khai báo (Temporal Dead Zone).
+**Không thể khai báo lại**: Biến không thể được khai báo lại trong cùng một phạm vi.
+
+```javascript
+function example() {
+  console.log(x); // ReferenceError (Temporal Dead Zone)
+  let x = 10;
+  console.log(x); // 10
+}
+example();
+```
+
+### `consst`
+
+**Phạm vi khối (Block Scope)**: Giống như `let`, biến được khai báo bằng `const` có phạm vi trong khối chứa nó.
+**Hoisting**: Giống như `let`, biến khai báo bằng `const` cũng được hoisted nhưng không thể truy cập trước khi khai báo.
+**Không thể thay đổi giá trị**: Biến khai báo bằng `const` phải được khởi tạo khi khai báo và không thể thay đổi giá trị sau đó.
+
+```javascript
+function example() {
+  const x = 10;
+  console.log(x); // 10
+  x = 20; // TypeError: Assignment to constant variable.
+}
+example();
+```
+
+## Destructuring trong JavaScript
+
+Destructuring trong JavaScript là một cú pháp cho phép bạn trích xuất các giá trị từ mảng hoặc đối tượng và gán chúng vào các biến riêng lẻ. Dưới đây là một số ví dụ về destructuring:
+
+### Destructuring Mảng
+
+```javascript
+const array = [1, 2, 3, 4, 5];
+
+// Trích xuất các giá trị từ mảng
+const [first, second, third] = array;
+
+console.log(first); // 1
+console.log(second); // 2
+console.log(third); // 3
+```
+
+### Destructuring Đối tượng
+
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+// Trích xuất các giá trị từ đối tượng
+const { name, age, city } = person;
+
+console.log(name); // John
+console.log(age); // 30
+console.log(city); // New York
+```
+
+### Đặt Tên Biến Khác Khi Destructuring
+
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+  city: "New York",
+};
+
+// Đặt tên biến khác khi destructuring
+const { name: personName, age: personAge, city: personCity } = person;
+
+console.log(personName); // John
+console.log(personAge); // 30
+console.log(personCity); // New York
+```
+
+### Destructuring với Giá Trị Mặc Định
+
+```javascript
+const person = {
+  name: "John",
+  age: 30,
+};
+
+// Sử dụng giá trị mặc định nếu thuộc tính không tồn tại
+const { name, age, city = "Unknown" } = person;
+
+console.log(name); // John
+console.log(age); // 30
+console.log(city); // Unknown
+```
+
+### Destructuring Mảng Lồng Nhau
+
+```javascript
+const nestedArray = [1, [2, 3], 4];
+
+// Trích xuất giá trị từ mảng lồng nhau
+const [first, [second, third], fourth] = nestedArray;
+
+console.log(first); // 1
+console.log(second); // 2
+console.log(third); // 3
+console.log(fourth); // 4
+```
+
+### Destructuring đối tượng Lồng Nhau
+
+```javascript
+const nestedObject = {
+  name: "John",
+  address: {
+    city: "New York",
+    country: "USA",
+  },
+};
+
+// Trích xuất giá trị từ đối tượng lồng nhau
+const {
+  name,
+  address: { city, country },
+} = nestedObject;
+
+console.log(name); // John
+console.log(city); // New York
+console.log(country); // USA
+```
+
+## Spread Operator trong js
+
+Spread Operator trong JavaScript (...) là một cú pháp mạnh mẽ cho phép bạn mở rộng các phần tử của một mảng hoặc các thuộc tính của một đối tượng.
+
+### Spread Operator với Mảng
+
+```javascript
+const array1 = [1, 2, 3];
+const array2 = [4, 5, 6];
+
+// Kết hợp hai mảng
+const combinedArray = [...array1, ...array2];
+
+console.log(combinedArray); // [1, 2, 3, 4, 5, 6]
+
+// Sao chép một mảng
+const copiedArray = [...array1];
+
+console.log(copiedArray); // [1, 2, 3]
+```
+
+### Spread Operator với Đối Tượng
+
+```javascript
+const object1 = { a: 1, b: 2 };
+const object2 = { c: 3, d: 4 };
+
+// Kết hợp hai đối tượng
+const combinedObject = { ...object1, ...object2 };
+
+console.log(combinedObject); // { a: 1, b: 2, c: 3, d: 4 }
+
+// Sao chép một đối tượng
+const copiedObject = { ...object1 };
+
+console.log(copiedObject); // { a: 1, b: 2 }
+```
+
+### Spread Operator trong Hàm
+
+```javascript
+const numbers = [1, 2, 3, 4, 5];
+
+// Truyền các phần tử của mảng vào hàm
+const sum = (a, b, c, d, e) => a + b + c + d + e;
+
+console.log(sum(...numbers)); // 15
+```
+
+### Spread Operator với Chuỗi
+
+```javascript
+const string = "hello";
+
+// Chuyển đổi chuỗi thành mảng các ký tự
+const charArray = [...string];
+
+console.log(charArray); // ['h', 'e', 'l', 'l', 'o']
 ```
