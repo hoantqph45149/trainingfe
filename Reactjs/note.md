@@ -94,6 +94,36 @@ NPX là một công cụ cho phép bạn thực thi các gói Node.js mà không
 - `npx <command>`: Chạy một lệnh từ một gói mà không cần cài đặt nó toàn cục.
 - `npx create-react-app my-app`: Tạo một ứng dụng React mới mà không cần cài đặt `create-react-app` toàn cục.
 
+## memo trong react js
+
+`memo` là một Higher Order Component (HOC) trong React, được sử dụng để tối ưu hóa hiệu suất của các component bằng cách ghi nhớ (memoize) kết quả render của chúng. `memo` giúp ngăn chặn việc render lại không cần thiết của component khi các props của nó không thay đổi.
+
+### Ví dụ
+
+```javascript
+import React, { memo } from "react";
+
+function ChildComponent({ name }) {
+  return <div>Hello, {name}!</div>;
+}
+
+const MemoizedChildComponent = memo(ChildComponent);
+
+function ParentComponent() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <button onClick={() => setCount(count + 1)}>Tăng count</button>
+      <p>Count: {count}</p>
+      <MemoizedChildComponent name="Alice" />
+    </div>
+  );
+}
+
+export default ParentComponent;
+```
+
 ## Hooks trong reactjs
 
 Hooks là những methods hay là những hàm được reactjs viết sẵn, mỗi hàm sẽ là 1 tính năng và sẽ đc dùng trong những trường hợp cụ thể.
@@ -154,6 +184,29 @@ Mount là quá trình khi một component được tạo và thêm vào DOM. Cá
 Unmount là quá trình khi một component bị loại bỏ khỏi DOM. Các phương thức vòng đời liên quan đến unmount bao gồm:
 
 - `componentWillUnmount`: Được gọi ngay trước khi component bị loại bỏ khỏi DOM. Đây là nơi bạn có thể thực hiện các thao tác dọn dẹp như hủy subscriptions, xóa timers, hoặc hủy bỏ các yêu cầu API.
+
+## useLayoutEffect trong reactjs
+
+`useLayoutEffect` là một Hook trong React tương tự như `useEffect`, nhưng nó được gọi đồng bộ sau khi tất cả các thay đổi DOM đã được thực hiện. `useLayoutEffect` sẽ chạy trước khi trình duyệt cập nhật lại DOM.
+
+### Ví dụ
+
+```javascript
+import React, { useLayoutEffect, useRef } from "react";
+
+function LayoutEffectComponent() {
+  const divRef = useRef(null);
+
+  useLayoutEffect(() => {
+    const { height } = divRef.current.getBoundingClientRect();
+    console.log("Chiều cao của div:", height);
+  }, []);
+
+  return <div ref={divRef}>Đo chiều cao của tôi</div>;
+}
+
+export default LayoutEffectComponent;
+```
 
 ## useEffect trong reactjs
 
