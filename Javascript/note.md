@@ -875,3 +875,249 @@ const charArray = [...string];
 
 console.log(charArray); // ['h', 'e', 'l', 'l', 'o']
 ```
+
+## Map trong js
+
+`Map` trong JavaScript là một đối tượng lưu trữ các cặp khóa-giá trị, trong đó khóa có thể là bất kỳ kiểu dữ liệu nào. Dưới đây là một số cách sử dụng `Map`:
+
+### Tạo một Map
+
+```javascript
+let myMap = new Map();
+```
+
+### Thêm phần tử vào Map
+
+```javascript
+myMap.set("key1", "value1");
+myMap.set("key2", "value2");
+```
+
+### Truy cập phần tử trong Map
+
+```javascript
+let value1 = myMap.get("key1"); // 'value1'
+```
+
+### Kiểm tra sự tồn tại của khóa trong Map
+
+```javascript
+let hasKey1 = myMap.has("key1"); // true
+```
+
+### Xóa phần tử khỏi Map
+
+```javascript
+myMap.delete("key1");
+```
+
+### Lấy kích thước của Map
+
+```javascript
+let size = myMap.size; // 1
+```
+
+### Duyệt phần tử trong Map
+
+```javascript
+myMap.forEach((value, key) => {
+  console.log(key, value);
+});
+```
+
+### Xóa tất cả phần tử trong Map
+
+```javascript
+myMap.clear();
+```
+
+## Set trong js
+
+`Set` trong JavaScript là một đối tượng cho phép bạn lưu trữ các giá trị duy nhất, nghĩa là không có giá trị nào bị trùng lặp. Dưới đây là một số cách sử dụng `Set`:
+
+### Tạo một Set
+
+```javascript
+let mySet = new Set();
+```
+
+### Thêm phần tử vào Set
+
+```javascript
+mySet.add(1);
+mySet.add(5);
+mySet.add(5); // Không thêm giá trị này vì đã tồn tại
+```
+
+### Kiểm tra sự tồn tại của phần tử trong Set
+
+```javascript
+let hasValue = mySet.has(1); // true
+let hasValue2 = mySet.has(3); // false
+```
+
+### Xóa phần tử khỏi Set
+
+```javascript
+mySet.delete(1);
+```
+
+### Lấy kích thước của Set
+
+```javascript
+let size = mySet.size; // 1
+```
+
+### Duyệt qua các phần tử trong Set
+
+```javascript
+mySet.forEach((value) => {
+  console.log(value);
+});
+```
+
+### Xóa tất cả phần tử trong Set
+
+```javascript
+mySet.clear();
+```
+
+## this trong js
+
+`this` trong JavaScript là một từ khóa đặc biệt được sử dụng để tham chiếu đến đối tượng mà hàm hiện tại đang được gọi. Giá trị của `this` phụ thuộc vào ngữ cảnh mà hàm được gọi.
+
+### Ngữ cảnh toàn cục
+
+Trong ngữ cảnh toàn cục (global context), `this` tham chiếu đến đối tượng toàn cục (global object), trong trình duyệt là `window`.
+
+```javascript
+console.log(this); // Trong trình duyệt, sẽ in ra đối tượng window
+```
+
+### Ngữ cảnh đối tượng
+
+Khi một hàm được gọi như là một phương thức của một đối tượng, this tham chiếu đến đối tượng đó.
+
+```javascript
+const person = {
+  name: "John",
+  greet: function () {
+    console.log(this.name);
+  },
+};
+
+person.greet(); // John
+```
+
+### Ngữ cảnh hàm
+
+Trong một hàm thông thường, this tham chiếu đến đối tượng toàn cục (global object) trong chế độ không nghiêm ngặt (non-strict mode), và undefined trong chế độ nghiêm ngặt (strict mode)
+
+```javascript
+function showThis() {
+  console.log(this);
+}
+
+showThis(); // Trong chế độ không nghiêm ngặt, sẽ in ra đối tượng window
+```
+
+### Ngữ cảnh hàm tạo (constructor)
+
+Khi một hàm được sử dụng như một hàm tạo (constructor), this tham chiếu đến đối tượng mới được tạo
+
+```javascript
+function Person(name) {
+  this.name = name;
+}
+
+const john = new Person("John");
+console.log(john.name); // John
+```
+
+## bind trong js
+
+Phương thức `bind` trong JavaScript được sử dụng để tạo ra một hàm mới, khi được gọi, hàm này có `this` được gán với giá trị được cung cấp, với một chuỗi các đối số nhất định đứng trước bất kỳ đối số nào được cung cấp khi hàm mới được gọi.
+
+### Cú pháp
+
+```javascript
+fun.bind(thisArg[, arg1[, arg2[, ...]]])
+```
+
+`thisArg`: **Giá trị được truyền vào sẽ trở thành giá trị của this trong hàm mới.**
+`arg1, arg2, ...`: **Các đối số được truyền vào**
+
+### ví dụ
+
+```javascript
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function () {
+    return this.firstName + " " + this.lastName;
+  },
+};
+
+const member = {
+  firstName: "Jane",
+  lastName: "Smith",
+};
+
+let fullName = person.fullName.bind(member);
+console.log(fullName()); // Jane Smith
+```
+
+## call trong js
+
+Phương thức `call` trong JavaScript được sử dụng để gọi một hàm với một giá trị `this` nhất định và các đối số được cung cấp riêng lẻ.
+
+### Cú pháp
+
+```javascript
+fun.call(thisArg, arg1, arg2, ...)
+
+```
+
+`thisArg`: **Giá trị được truyền vào sẽ trở thành giá trị của this trong hàm.**
+`arg1, arg2, ...`: **Các đối số được truyền vào hàm.**
+
+### Ví dụ
+
+```javascript
+function greet(greeting, punctuation) {
+  console.log(greeting + ", " + this.name + punctuation);
+}
+
+const person = {
+  name: "John",
+};
+
+greet.call(person, "Hello", "!"); // Hello, John!
+```
+
+## apply trong js
+
+Phương thức `apply` trong JavaScript được sử dụng để gọi một hàm với một giá trị `this` nhất định và các đối số được cung cấp dưới dạng một mảng.
+
+### Cú pháp
+
+```javascript
+fun.apply(thisArg, [argsArray]);
+```
+
+`thisArg`: **Giá trị được truyền vào sẽ trở thành giá trị của this trong hàm.**
+`argsArray`: **Một mảng các đối số được truyền vào hàm.**
+
+### Ví dụ
+
+```javascript
+function greet(greeting, punctuation) {
+  console.log(greeting + ", " + this.name + punctuation);
+}
+
+const person = {
+  name: "John",
+};
+
+greet.apply(person, ["Hello", "!"]); // Hello, John!
+```
